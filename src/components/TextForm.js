@@ -22,6 +22,8 @@ export default function TextForm(props) {
     <div>
       <h2>{props.heading}</h2>
 
+      
+
       <div className="form-group border border-secondary">
           {/* Using textarea to get input from user  */}
         <textarea
