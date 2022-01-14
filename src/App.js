@@ -1,10 +1,10 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-import About from "./components/About";
+// import About from "./components/About";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
-import { BrowserRouter as Router, Switch, Route, Link,Routes } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
 function App() {
@@ -34,13 +34,18 @@ function App() {
       showAlert("Light mode has been enabled", "success");
     }
   };
-  // const rootElement = document.getElementById("root");
+
+
   return (
     <>
-    <Router>
+    
     <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert} />
     <div className="container my-3">
+      <TextForm heading="Enter the text below to analyze" mode={mode}/>
+    </div>
+
+    {/* <Router>
 
       <Switch>
         <Route exact path="/about">
@@ -53,9 +58,8 @@ function App() {
 
       </Switch>
 
-    </div>
+    </Router> */}
 
-    </Router>
     </>
   );
 }
